@@ -1,0 +1,13 @@
+{
+  "alpha": 0.25,
+  "beta0": 1.0,
+  "gamma": 1.0,
+  "num_fireflies": 20,
+  "max_generations": 50,
+  "lower_bound": -10.0,
+  "upper_bound": 10.0,
+  "regression_degree": 2,
+  "forecast_feature": "temperature",
+  "sliding_window": 5,
+  "train_test_split_ratio": 0.8
+}
