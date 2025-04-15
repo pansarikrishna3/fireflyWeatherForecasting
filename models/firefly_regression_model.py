@@ -31,7 +31,7 @@ class FireflyRegressor:
             num_fireflies: int = 20, max_generations: int = 50,
             alpha: float = 0.25, beta0: float = 1.0, gamma: float = 1.0,
             verbose: bool = False) -> None:
-        dim = self.degree + 1
+        dim = X.shape[1] * (self.degree + 1)
 
         def fitness_fn(weights):
             return self._mse(weights, X, y)
