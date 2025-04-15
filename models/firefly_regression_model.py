@@ -19,7 +19,8 @@ class FireflyRegressor:
 
     def _design_matrix(self, X: np.ndarray) -> np.ndarray:
         # Polynomial features: [1, X, X^2, ..., X^d]
-        return np.vstack([X ** i for i in range(self.degree + 1)]).T
+        features = [X ** i for i in range(self.degree + 1)]
+        return np.hstack(features)
 
     def _mse(self, weights: np.ndarray, X: np.ndarray, y: np.ndarray) -> float:
         X_poly = self._design_matrix(X)
